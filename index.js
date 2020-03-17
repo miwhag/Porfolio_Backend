@@ -16,11 +16,11 @@ app.use((req, res, next) => {
 });
 
 
-app.get('https://miwha-geschwind-portfolio.herokuapp.com/  ', (req, res, next) => {
+app.get('/', (req, res, next) => {
     res.send('API Status: Running ')
 });
 
-app.post('https://miwha-geschwind-portfolio.herokuapp.com/', (req, res, next) => {
+app.post('/emails', (req, res, next) => {
 
     sendGrid.setApiKey(process.env.API_KEY);
     const msg = {
@@ -46,4 +46,7 @@ app.post('https://miwha-geschwind-portfolio.herokuapp.com/', (req, res, next) =>
 });
 
 
-app.listen(process.env.PORT || 5000)
+const PORT = process.env.PORT || 3030
+app.listen(PORT, () => {
+    console.log(`Listening on ${PORT}`)
+})

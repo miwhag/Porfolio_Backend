@@ -16,11 +16,11 @@ app.use((req, res, next) => {
 });
 
 
-app.get('/api', (req, res, next) => {
+app.get('https://miwha-geschwind-portfolio.herokuapp.com/  ', (req, res, next) => {
     res.send('API Status: Running ')
 });
 
-app.post('/api/email', (req, res, next) => {
+app.post('https://miwha-geschwind-portfolio.herokuapp.com/', (req, res, next) => {
 
     sendGrid.setApiKey(process.env.API_KEY);
     const msg = {

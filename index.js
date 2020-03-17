@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const sendGrid = require('sendgrid');
+const sendGrid = require('@sendgrid/mail');
 const app = express(); 
 require('dotenv').config()
 console.log(process.env);
